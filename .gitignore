@@ -6,6 +6,13 @@ __pycache__/
 # C extensions
 *.so
 
+# zc.buildout / virtualenv
+bin/
+buildout.cfg
+include/
+local/
+pip-selfcheck.json
+
 # Distribution / packaging
 .Python
 env/
