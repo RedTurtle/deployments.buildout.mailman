@@ -3,7 +3,7 @@
 set -e
 
 VIRTUALENV_BIN=`which virtualenv-3 || which virtualenv`
-PYTHON=`which python3 || which python`
+PYTHON=`which python3.4`
 "$VIRTUALENV_BIN" --no-site-packages -p "$PYTHON" .
 
 # Let's enter the virtualenv
