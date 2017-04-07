@@ -1,0 +1,34 @@
+[paths.master]
+var_dir: ${buildout:directory}/var/mailman
+
+[paths.dev]
+var_dir: ${buildout:directory}/var/mailman
+
+[paths.here]
+var_dir: ${buildout:directory}/var/mailman
+
+[webservice]
+admin_user: restadmin
+admin_pass: ${secret:restpass}
+
+[mta]
+incoming: mailman.mta.postfix.LMTP
+outgoing: mailman.mta.deliver.deliver
+lmtp_host: 127.0.0.1
+lmtp_port: 8024
+smtp_host: 127.0.0.1
+smtp_port: 25
+# configuration: python:mailman.config.postfix
+
+# TODO: verificare se questi vanno sovrascritti
+# [paths.fhs]
+# # Filesystem Hiearchy Standard 2.3
+# # http://www.pathname.com/fhs/pub/fhs-2.3.html
+# bin_dir: /sbin
+# var_dir: /var/lib/mailman
+# queue_dir: /var/spool/mailman
+# log_dir: /var/log/mailman
+# lock_dir: /var/lock/mailman
+# etc_dir: /etc
+# ext_dir: /etc/mailman.d
+# pid_file: /var/run/mailman/master.pid

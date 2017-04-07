@@ -1,0 +1,11 @@
+#!/bin/bash
+# https://git.ziegler.bz/docker/virtualmail/blob/mailman/bin/mailman.sh
+# call "mailman stop" when exiting
+trap "{ echo Stopping Mailman; /usr/local/bin/mailman stop; exit 0; }" EXIT
+
+# start postfix
+${buildout:directory}/bin/mailman start
+# avoid exiting
+
+sleep infinity
+
