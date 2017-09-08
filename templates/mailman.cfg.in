@@ -20,6 +20,10 @@ smtp_host: 127.0.0.1
 smtp_port: 25
 # configuration: python:mailman.config.postfix
 
+# [devmode]
+# enabled: yes
+# recipient: your.address@your.domain
+
 # TODO: verificare se questi vanno sovrascritti
 # [paths.fhs]
 # # Filesystem Hiearchy Standard 2.3
